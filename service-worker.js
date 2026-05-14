@@ -1,4 +1,4 @@
-/* Manifest version: srjNezTp */
+/* Manifest version: YX7skRmO */
 // Service Worker publicado — Portal Virgen de Guadalupe · La Tortuga
 // Este archivo es generado automáticamente al publicar (dotnet publish)
 // Reemplaza service-worker.js con caché optimizado de assets

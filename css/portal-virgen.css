@@ -1,0 +1,1077 @@
+/* ============================================================
+   Portal Virgen de Guadalupe · La Tortuga, Tequisquiapan, Qro.
+   Hoja de Estilos Principal — Estética Mariana
+   Paleta: Blanco #FFFFFF · Azul Celeste #87CEEB · Dorado #D4AF37
+   ============================================================ */
+
+/* ── Google Fonts importadas en index.html ── */
+
+/* ── Variables CSS ── */
+:root {
+    --blanco:          #FFFFFF;
+    --azul-celeste:    #87CEEB;
+    --azul-medio:      #5BA3D0;
+    --azul-oscuro:     #2A6B9C;
+    --azul-profundo:   #1A3D5C;
+    --dorado:          #D4AF37;
+    --dorado-oscuro:   #A88A20;
+    --dorado-claro:    #F0D060;
+    --crema:           #FAF6EE;
+    --gris-texto:      #3A3A3A;
+    --gris-suave:      #F0EDE6;
+    --sombra-suave:    0 4px 20px rgba(42, 107, 156, 0.15);
+    --sombra-dorada:   0 4px 20px rgba(212, 175, 55, 0.30);
+    --radio:           8px;
+    --radio-grande:    16px;
+    --transicion:      0.3s ease;
+    --fuente-titulo:   'Playfair Display', 'Georgia', serif;
+    --fuente-cuerpo:   'Lato', 'Segoe UI', sans-serif;
+}
+
+/* ── Reset y base ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--crema);
+    color: var(--gris-texto);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--azul-oscuro);
+    text-decoration: none;
+    transition: color var(--transicion);
+}
+
+a:hover { color: var(--dorado-oscuro); }
+
+/* ── Orlas decorativas ── */
+.orla-superior, .orla-inferior {
+    height: 10px;
+    background: linear-gradient(90deg,
+        var(--azul-profundo) 0%,
+        var(--dorado) 25%,
+        var(--azul-celeste) 50%,
+        var(--dorado) 75%,
+        var(--azul-profundo) 100%);
+}
+
+/* ── Wrapper general ── */
+.portal-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ══════════════════════════════════════════════════════════
+   HEADER
+   ══════════════════════════════════════════════════════════ */
+.portal-header {
+    background: linear-gradient(160deg, var(--azul-profundo) 0%, var(--azul-oscuro) 60%, var(--azul-medio) 100%);
+    color: var(--blanco);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.header-icon {
+    font-size: 1.6rem;
+    color: var(--dorado);
+    animation: pulso 3s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+.header-titles {
+    text-align: center;
+    flex: 1;
+}
+
+.header-subtitle {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--azul-celeste);
+    margin-bottom: 0.2rem;
+}
+
+.header-main-title {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--blanco);
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.header-tagline {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--dorado-claro);
+    letter-spacing: 0.1em;
+    margin-top: 0.25rem;
+}
+
+/* ── Navegación ── */
+.portal-nav {
+    background: rgba(0,0,0,0.25);
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-list li a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.75rem 1.1rem;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: all var(--transicion);
+    border-bottom: 3px solid transparent;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+    color: var(--dorado-claro);
+    border-bottom-color: var(--dorado);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.nav-icon { font-size: 1rem; }
+
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 1px solid var(--dorado);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0.5rem 1rem;
+}
+
+.nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--dorado);
+    border-radius: 2px;
+    transition: var(--transicion);
+}
+
+/* ══════════════════════════════════════════════════════════
+   MAIN
+   ══════════════════════════════════════════════════════════ */
+.portal-main {
+    flex: 1;
+}
+
+/* ══════════════════════════════════════════════════════════
+   HERO DE OFRENDA (Index)
+   ══════════════════════════════════════════════════════════ */
+.ofrenda-hero {
+    background: linear-gradient(180deg, var(--azul-profundo) 0%, var(--azul-oscuro) 50%, #1a2f4a 100%);
+    color: var(--blanco);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    gap: 2.5rem;
+}
+
+/* Aureola animada */
+.ofrenda-aureola {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    pointer-events: none;
+}
+
+.aureola-rayo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 280px;
+    background: linear-gradient(to top, transparent, rgba(212, 175, 55, 0.12));
+    transform-origin: bottom center;
+    transform: rotate(calc(var(--i) * 30deg)) translateX(-50%);
+    animation: rayoGirar 20s linear infinite;
+}
+
+@keyframes rayoGirar {
+    to { transform: rotate(calc(var(--i) * 30deg + 360deg)) translateX(-50%); }
+}
+
+/* Marco de la imagen */
+.virgen-marco {
+    position: relative;
+    z-index: 2;
+}
+
+.virgen-imagen-contenedor {
+    width: 200px;
+    height: 240px;
+    border-radius: 50% 50% 45% 45%;
+    overflow: hidden;
+    border: 4px solid var(--dorado);
+    box-shadow: 0 0 0 8px rgba(212,175,55,0.2), var(--sombra-dorada);
+    background: var(--azul-medio);
+}
+
+.virgen-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.virgen-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(160deg, var(--azul-medio), var(--azul-oscuro));
+    color: var(--dorado-claro);
+    text-align: center;
+}
+
+.placeholder-icono { font-size: 3rem; }
+.placeholder-texto { font-size: 0.75rem; letter-spacing: 0.1em; }
+
+/* Texto de ofrenda */
+.ofrenda-texto {
+    position: relative;
+    z-index: 2;
+    max-width: 560px;
+}
+
+.ofrenda-invocacion {
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    color: var(--dorado);
+    margin-bottom: 0.75rem;
+}
+
+.ofrenda-titulo {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--blanco);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.ofrenda-mensaje {
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 2;
+    color: rgba(255,255,255,0.88);
+    border-left: 3px solid var(--dorado);
+    padding-left: 1.5rem;
+    text-align: left;
+    margin-bottom: 1.25rem;
+}
+
+.ofrenda-firma {
+    font-size: 0.9rem;
+    color: var(--dorado-claro);
+    text-align: right;
+    font-style: italic;
+}
+
+/* ── Separador dorado ── */
+.separador-dorado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.5rem 0;
+    background: var(--crema);
+    color: var(--dorado);
+    font-size: 1rem;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SECCIONES GENÉRICAS
+   ══════════════════════════════════════════════════════════ */
+section {
+    padding: 3rem 0;
+}
+
+.seccion-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.seccion-titulo {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: var(--azul-profundo);
+    text-align: center;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.seccion-titulo::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--dorado), var(--dorado-claro));
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.seccion-subtitulo {
+    text-align: center;
+    color: var(--azul-medio);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* ── Sección festividad ── */
+.seccion-festividad {
+    background: var(--blanco);
+}
+
+.festividad-contenido {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 3rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.festividad-texto p {
+    margin-bottom: 1rem;
+    color: var(--gris-texto);
+}
+
+.festividad-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dato-card {
+    background: var(--crema);
+    border: 1px solid var(--dorado-claro);
+    border-radius: var(--radio);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.25rem 0.75rem;
+    align-items: center;
+}
+
+.dato-icono {
+    font-size: 1.5rem;
+    grid-row: 1 / 3;
+}
+
+.dato-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--azul-medio);
+    font-weight: 600;
+}
+
+.dato-valor {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--azul-profundo);
+}
+
+/* ── Accesos rápidos (cards) ── */
+.seccion-accesos {
+    background: var(--crema);
+}
+
+.accesos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.acceso-card {
+    background: var(--blanco);
+    border: 1px solid rgba(135, 206, 235, 0.4);
+    border-top: 4px solid var(--dorado);
+    border-radius: var(--radio-grande);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all var(--transicion);
+    box-shadow: var(--sombra-suave);
+    color: var(--gris-texto);
+}
+
+.acceso-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-dorada);
+    border-top-color: var(--azul-oscuro);
+    color: var(--gris-texto);
+}
+
+.acceso-icono-grande { font-size: 2.5rem; }
+
+.acceso-card h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.1rem;
+    color: var(--azul-profundo);
+}
+
+.acceso-card p {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.acceso-enlace {
+    margin-top: auto;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--dorado-oscuro);
+}
+
+/* ── Galería ── */
+.seccion-galeria-home {
+    background: var(--azul-profundo);
+    color: var(--blanco);
+}
+
+.seccion-galeria-home .seccion-titulo { color: var(--dorado-claro); }
+.seccion-galeria-home .seccion-subtitulo { color: var(--azul-celeste); }
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.galeria-item {
+    background: rgba(255,255,255,0.05);
+    border-radius: var(--radio);
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: var(--transicion);
+}
+
+.galeria-item:hover {
+    border-color: var(--dorado);
+    transform: scale(1.02);
+}
+
+.galeria-imagen-contenedor {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: rgba(255,255,255,0.05);
+}
+
+.galeria-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.galeria-item:hover .galeria-foto {
+    transform: scale(1.05);
+}
+
+.galeria-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(135, 206, 235, 0.08);
+    border: 2px dashed rgba(212, 175, 55, 0.4);
+    cursor: default;
+    color: var(--dorado-claro);
+}
+
+.placeholder-add {
+    font-size: 2.5rem;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.placeholder-hint {
+    font-size: 0.7rem;
+    font-family: monospace;
+    opacity: 0.5;
+}
+
+.galeria-descripcion {
+    padding: 0.75rem 1rem;
+    font-size: 0.83rem;
+    color: rgba(255,255,255,0.75);
+    text-align: center;
+}
+
+.galeria-instruccion {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: var(--radio);
+    border: 1px dashed rgba(212, 175, 55, 0.3);
+    font-size: 0.83rem;
+    color: rgba(255,255,255,0.65);
+    text-align: center;
+}
+
+.galeria-instruccion code {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--dorado-claro);
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+/* ── Oración final ── */
+.seccion-oracion {
+    background: linear-gradient(160deg, var(--crema) 0%, #e8f4fd 100%);
+    border-top: 3px solid var(--dorado);
+    padding: 4rem 2rem;
+}
+
+.oracion-contenido {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.oracion-cruz {
+    font-size: 3rem;
+    color: var(--dorado);
+    margin-bottom: 1rem;
+    animation: pulso 3s ease-in-out infinite;
+}
+
+.oracion-titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.6rem;
+    color: var(--azul-profundo);
+    margin-bottom: 1.5rem;
+}
+
+.oracion-texto {
+    font-size: 1.05rem;
+    line-height: 2;
+    color: var(--gris-texto);
+    font-style: italic;
+}
+
+.oracion-flores {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.5rem;
+}
+
+@keyframes pulso {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(0.95); }
+}
+
+/* ══════════════════════════════════════════════════════════
+   PÁGINAS INTERIORES
+   ══════════════════════════════════════════════════════════ */
+.pagina-interior {
+    padding-bottom: 2rem;
+}
+
+.pagina-hero {
+    padding: 3.5rem 2rem;
+    text-align: center;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cucharilla-hero { background: linear-gradient(160deg, #2d5a1b 0%, #4a7c3f 50%, var(--azul-profundo) 100%); }
+.grupos-hero     { background: linear-gradient(160deg, var(--azul-profundo) 0%, #3a1d8c 100%); }
+.nazarenos-hero  { background: linear-gradient(160deg, #3d1414 0%, #7c2020 50%, var(--azul-profundo) 100%); }
+.mision-hero     { background: linear-gradient(160deg, var(--azul-oscuro) 0%, var(--dorado-oscuro) 100%); }
+
+.pagina-hero-ornamento { font-size: 3rem; opacity: 0.8; }
+
+.pagina-titulo {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.pagina-subtitulo {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.8);
+    font-style: italic;
+}
+
+/* ── Texto devocional ── */
+.seccion-descripcion { background: var(--blanco); }
+
+.texto-devocional .texto-intro {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--azul-profundo);
+    margin-bottom: 1.25rem;
+    border-left: 4px solid var(--dorado);
+    padding-left: 1.25rem;
+}
+
+.texto-devocional p { margin-bottom: 1rem; }
+
+/* ── Obras (Cucharilla) ── */
+.obras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.obra-card {
+    background: var(--blanco);
+    border-radius: var(--radio-grande);
+    padding: 2rem;
+    border: 1px solid rgba(135, 206, 235, 0.3);
+    box-shadow: var(--sombra-suave);
+}
+
+.obra-numero {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--dorado), var(--dorado-oscuro));
+    color: var(--blanco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente-titulo);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.obra-card h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.2rem;
+    color: var(--azul-profundo);
+    margin-bottom: 0.75rem;
+}
+
+.obra-foto-zona { margin-top: 1.5rem; }
+
+/* ── Responsabilidades (Grupos) ── */
+.seccion-responsabilidades { background: var(--crema); }
+
+.responsabilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.resp-card {
+    background: var(--blanco);
+    border-radius: var(--radio-grande);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid var(--dorado);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+}
+
+.resp-card:hover { transform: translateY(-3px); box-shadow: var(--sombra-dorada); }
+
+.resp-icono { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+
+.resp-card h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--azul-profundo);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* ── Tabla de rotación ── */
+.seccion-rotacion { background: var(--blanco); }
+
+.rotacion-tabla-contenedor { margin-top: 2rem; overflow-x: auto; }
+
+.rotacion-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.rotacion-tabla th {
+    background: var(--azul-profundo);
+    color: var(--dorado-claro);
+    padding: 0.9rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.rotacion-tabla td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(135, 206, 235, 0.25);
+}
+
+.rotacion-tabla tr:nth-child(even) td { background: var(--gris-suave); }
+.rotacion-tabla tr:hover td { background: rgba(135, 206, 235, 0.15); }
+
+.pareja-num { font-weight: 700; color: var(--azul-oscuro); }
+
+.tabla-nota {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* ── Recorrido (Nazarenos) ── */
+.seccion-recorrido { background: var(--blanco); }
+
+.recorrido-contenido {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.recorrido-icono-grande { font-size: 5rem; flex-shrink: 0; }
+
+.recorrido-texto p { margin-bottom: 1rem; }
+
+/* ── Procesiones ── */
+.seccion-procesiones { background: var(--crema); }
+
+.procesion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.procesion-card {
+    background: var(--blanco);
+    border-radius: var(--radio-grande);
+    padding: 2rem;
+    border-top: 4px solid #7c2020;
+    box-shadow: var(--sombra-suave);
+}
+
+.procesion-num {
+    font-family: var(--fuente-titulo);
+    font-size: 2.5rem;
+    color: rgba(124, 32, 32, 0.15);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.procesion-card h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--azul-profundo);
+    margin-bottom: 0.75rem;
+}
+
+/* ── Pasos (Misión) ── */
+.seccion-como-funciona { background: var(--blanco); }
+
+.pasos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.paso-card {
+    background: var(--crema);
+    border-radius: var(--radio-grande);
+    padding: 2rem 1.5rem;
+    border-left: 4px solid var(--dorado);
+    position: relative;
+}
+
+.paso-numero {
+    width: 36px;
+    height: 36px;
+    background: var(--dorado);
+    color: var(--blanco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.paso-card h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--azul-profundo);
+    margin-bottom: 0.75rem;
+}
+
+/* ── Condiciones ── */
+.seccion-condiciones { background: var(--crema); }
+
+.condiciones-lista {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.condicion-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: var(--blanco);
+    border-radius: var(--radio);
+    padding: 1rem 1.25rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.condicion-icono { font-size: 1.5rem; flex-shrink: 0; }
+
+/* ── Contacto ── */
+.seccion-contacto { background: var(--blanco); }
+
+.contacto-card {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    background: var(--crema);
+    border-radius: var(--radio-grande);
+    padding: 2.5rem;
+    border: 2px solid var(--dorado-claro);
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.contacto-icono { font-size: 3rem; flex-shrink: 0; }
+
+.contacto-info h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--azul-profundo);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-info p { margin-bottom: 0.75rem; font-size: 0.95rem; }
+
+.contacto-placeholder {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px dashed var(--dorado);
+    border-radius: var(--radio);
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.contacto-horario { font-size: 0.85rem; color: #666; font-style: italic; }
+
+/* ══════════════════════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════════════════════ */
+.portal-footer {
+    background: var(--azul-profundo);
+    color: rgba(255,255,255,0.75);
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.footer-inner { max-width: 700px; margin: 0 auto; }
+
+.footer-ornament {
+    color: var(--dorado);
+    font-size: 0.9rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-dedicatoria {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-comunidad {
+    font-size: 0.85rem;
+    color: var(--azul-celeste);
+    margin-bottom: 0.5rem;
+}
+
+.footer-fecha {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+}
+
+/* ── Not found ── */
+.not-found {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: var(--azul-profundo);
+}
+
+.not-found h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* ── Botón dorado ── */
+.btn-dorado {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--dorado), var(--dorado-oscuro));
+    color: var(--blanco);
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: var(--transicion);
+}
+
+.btn-dorado:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-dorada);
+    color: var(--blanco);
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE — MÓVIL
+   ══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .header-inner { padding: 1rem; }
+    .header-icon { display: none; }
+
+    .nav-hamburger { display: flex; }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .nav-list.nav-open { display: flex; }
+
+    .nav-list li a {
+        padding: 0.85rem 1.25rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .ofrenda-hero { padding: 3rem 1.5rem; }
+
+    .festividad-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .recorrido-contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacto-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .accesos-grid,
+    .pasos-grid,
+    .responsabilidades-grid,
+    .obras-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ofrenda-mensaje {
+        font-size: 0.95rem;
+        padding-left: 1rem;
+    }
+
+    .virgen-imagen-contenedor {
+        width: 160px;
+        height: 190px;
+    }
+}

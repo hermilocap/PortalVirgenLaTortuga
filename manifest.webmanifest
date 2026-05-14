@@ -1,0 +1,27 @@
+{
+  "name": "Portal Virgen de Guadalupe · La Tortuga",
+  "short_name": "Virgen La Tortuga",
+  "description": "Portal devocional de la comunidad de La Tortuga, Tequisquiapan, Querétaro. Tradiciones marianas y festividad del 12 de diciembre.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1A3D5C",
+  "theme_color": "#1A3D5C",
+  "lang": "es-MX",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["religion", "lifestyle", "education"]
+}

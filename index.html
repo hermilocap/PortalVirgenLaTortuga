@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portal devocional de la Virgen de Guadalupe · Comunidad de La Tortuga, Tequisquiapan, Querétaro · Tradiciones, grupos de la iglesia y misión de visita." />
+    <meta name="theme-color" content="#1A3D5C" />
+    <meta name="apple-mobile-web-app-title" content="Virgen La Tortuga" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portal Virgen de Guadalupe · La Tortuga" />
+    <meta property="og:description" content="Portal devocional de la comunidad de La Tortuga, Tequisquiapan, Querétaro." />
+    <meta property="og:type" content="website" />
+
+    <title>Portal Virgen de Guadalupe · La Tortuga, Qro.</title>
+    <base href="/" />
+
+    <!-- Google Fonts: Playfair Display + Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Estilos del portal -->
+    <link rel="stylesheet" href="css/portal-virgen.css" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <!-- Blazor CSS -->
+    <link rel="stylesheet" href="PortalVirgenLaTortuga.styles.css" />
+</head>
+
+<body>
+    <div id="app">
+        <!-- Pantalla de carga mientras inicializa Blazor WASM -->
+        <div style="
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(160deg, #1A3D5C 0%, #2A6B9C 100%);
+            color: white;
+            font-family: Georgia, serif;
+            gap: 1.5rem;
+            text-align: center;
+            padding: 2rem;
+        ">
+            <div style="font-size: 3rem; animation: pulse 2s ease-in-out infinite;">✝</div>
+            <h1 style="font-size: 1.8rem; color: #D4AF37; margin: 0;">Virgen de Guadalupe</h1>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; font-style: italic;">
+                La Tortuga · Tequisquiapan, Querétaro
+            </p>
+            <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">Cargando portal...</p>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui" role="alert">
+        Ha ocurrido un error inesperado. Por favor recarga la página.
+        <a href="." class="reload">Recargar</a>
+        <span class="dismiss">✕</span>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+</body>
+
+</html>

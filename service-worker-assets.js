@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "slvfU9nX",
+  "version": "srjNezTp",
   "assets": [
     {
       "hash": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=",
@@ -186,7 +186,7 @@ self.assetsManifest = {
       "url": "images/nazarenos/LEEME.md"
     },
     {
-      "hash": "sha256-o7jXY5WBRNTCYfMoe8djcP6xwvYI/OZwqjlhnDeeCN4=",
+      "hash": "sha256-cxefUFGNUdIHyvKAuJPsvMMPfgXETXiPBeeG0ztmJ8E=",
       "url": "index.html"
     },
     {

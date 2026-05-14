@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "PortalVirgenLaTortuga",
   "resources": {
-    "hash": "sha256-3Y6TgzxLRsKnxnIDo5X4Z2hJNQTe+szfCuH5PiHM8XY=",
+    "hash": "sha256-AstvDhfT5ydsLS6j5eOJ/SBsvnHROahQBBXz0xMm0gA=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.33t0rzulld.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.7apenvi18o.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -34,7 +34,7 @@
       "System.Text.Json.f50em72a10.wasm": "System.Text.Json.wasm",
       "System.Text.RegularExpressions.r3pajpjfnd.wasm": "System.Text.RegularExpressions.wasm",
       "System.Private.CoreLib.7tb1pmawe6.wasm": "System.Private.CoreLib.wasm",
-      "PortalVirgenLaTortuga.a2l4de0cd1.wasm": "PortalVirgenLaTortuga.wasm",
+      "PortalVirgenLaTortuga.5rhcc7pwt9.wasm": "PortalVirgenLaTortuga.wasm",
       "dotnet.native.9tl81yylyd.js": "dotnet.native.js",
       "dotnet.native.nt27ntjn3y.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
@@ -91,7 +91,7 @@
       "System.Text.Encodings.Web.ifs5a901k1.wasm": "sha256-0pI1j/Zg5vLeeWfzHe25ZNTUkGImNi+puc0csHLdA4s=",
       "System.Text.Json.f50em72a10.wasm": "sha256-vRXavpx/dbyRJ19fmX86A8hGUV/xLPuJx5WnCcp/ze0=",
       "System.Text.RegularExpressions.r3pajpjfnd.wasm": "sha256-l4SnmjquJFcc091mXH999KwaayPLidng6HuZ7aQ9PmA=",
-      "PortalVirgenLaTortuga.a2l4de0cd1.wasm": "sha256-XpcecYC74rK0TBfmA3U6sZB+w4/jrubdGzmZXBZ+Gv8="
+      "PortalVirgenLaTortuga.5rhcc7pwt9.wasm": "sha256-4XwYJYfIzKl4fwiHfDQ8jbm/KgsXnMoKfqIATa6B71U="
     }
   },
   "cacheBootResources": true,

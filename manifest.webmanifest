@@ -8,20 +8,27 @@
   "theme_color": "#1A3D5C",
   "lang": "es-MX",
   "orientation": "portrait-primary",
+  //"icons": [
+  //  {
+  //    "src": "icons/icon-192.png",
+  //    "type": "image/png",
+  //    "sizes": "192x192",
+  //    "purpose": "any maskable"
+  //  },
+  //  {
+  //    "src": "icons/icon-512.png",
+  //    "type": "image/png",
+  //    "sizes": "512x512",
+  //    "purpose": "any maskable"
+  //  }
+  //],
   "icons": [
     {
-      "src": "icons/icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "icons/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any maskable"
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231A3D5C'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='%23D4AF37'>✝</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ],
   "screenshots": [],
-  "categories": ["religion", "lifestyle", "education"]
+  "categories": [ "religion", "lifestyle", "education" ]
 }

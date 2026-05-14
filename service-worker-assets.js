@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "YX7skRmO",
+  "version": "ZMO8+58T",
   "assets": [
     {
       "hash": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=",
@@ -62,8 +62,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.WebAssembly.heoad7mujs.wasm"
     },
     {
-      "hash": "sha256-XpcecYC74rK0TBfmA3U6sZB+w4/jrubdGzmZXBZ+Gv8=",
-      "url": "_framework/PortalVirgenLaTortuga.a2l4de0cd1.wasm"
+      "hash": "sha256-4XwYJYfIzKl4fwiHfDQ8jbm/KgsXnMoKfqIATa6B71U=",
+      "url": "_framework/PortalVirgenLaTortuga.5rhcc7pwt9.wasm"
     },
     {
       "hash": "sha256-q7/3iydSI8LWUodtxDPj00F0TrrbHTIaZy9R5gKuxPE=",
@@ -134,7 +134,7 @@ self.assetsManifest = {
       "url": "_framework/System.Text.RegularExpressions.r3pajpjfnd.wasm"
     },
     {
-      "hash": "sha256-Mjfyx+LOA6NNYpLqK0qZVkwjCoBVjk/gb2s6ZYn1VyM=",
+      "hash": "sha256-Ufcl8RmFIn03m6Z5zsN0bW5f/zl7uOzd8QQ+IE7trU4=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -186,11 +186,11 @@ self.assetsManifest = {
       "url": "images/nazarenos/LEEME.md"
     },
     {
-      "hash": "sha256-XJ9ZVT9Q0KOFSGurrdy0jZJ4b5jTrYYYw3TRuliLeKs=",
+      "hash": "sha256-QBICfqaO80Yay6sSo1Xy9dhKnOcG+6S20EcmDw5sd84=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-EcfdwIP0mO7OJstCBgGBp1nt5ZCDGVpv/GVVuKjEtzM=",
+      "hash": "sha256-f2QfzJk5Fxxz89rRxzFcc01gvEWvkoU8IHS/kv4o84I=",
       "url": "manifest.webmanifest"
     }
   ]
